@@ -136,25 +136,27 @@ nav ul{
     font-size:19px;
 }
 .txt button{
-    width: 100px;
-    height: 25px;
+    width: 90px;
+    height: 30px;
     border: none;
     background-color: rgb(1, 148, 148);
     color: white;
     font-size: 16px;
     margin-top: 8px;
+    transition: all 0,3s ease;
+    border-radius: 10px;
     
 }
-.quantity button{
-    width: 20px;
-    height: 15px;
-    background-color:white;
-    color: black;
-  
 
-
+/* Hover effect for buttons */
+.txt button:hover{
+    width: 90px; /* কম width */
+    height: 22px; /* কম height */
+    background-color: rgb(45, 41, 27);
+    cursor: pointer;
+    font-weight: 700;
+    border-radius: 5px; /* Rounded corners */
 }
- 
 .crd img{
     width: 85%;
     padding: 22px;
@@ -190,7 +192,7 @@ nav ul{
     padding: 7px;
 }
 .txt a:hover{
-    background-color: rgb(2, 146, 146);
+    background-color: rgb(146, 125, 2);
     cursor: pointer;
     border-radius: 22px;
     transition: 0.9 ease;
@@ -397,4 +399,219 @@ nav ul{
     background-color: rgb(4, 141, 141);
     cursor: pointer;
 
+}
+
+
+
+
+
+
+/* //// */
+
+.product {
+    height: 100vh;
+    background-color: whitesmoke;
+    position: relative;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+  }
+  
+  .payment {
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 10px 50px;
+    display: none;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .payTitle {
+    font-size: 20px;
+    color: lightgray;
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  .payInput {
+    padding: 10px;
+    margin: 10px 0px;
+    border: none;
+    border-bottom: 1px solid gray;
+  }
+  
+  .payInput::placeholder {
+    color: rgb(163, 163, 163);
+  }
+  
+  .cardIcons {
+    display: flex;
+  }
+  
+  .cardIcon {
+    margin-right: 10px;
+  }
+  
+  .cardInfo {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .sm {
+    width: 30%;
+  }
+  
+  .payButton {
+    position: absolute;
+    height: 40px;
+    bottom: -40;
+    width: 100%;
+    left: 0;
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    background-color: #369e62;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: gray;
+    color: white;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 2px;
+  }
+  
+  .productImg {
+    width: 50%;
+  }
+  
+  .productDetails {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 40%;
+    padding: 50px;
+  }
+  
+  .productTitle {
+    font-size: 75px;
+    font-weight: 900;
+  }
+  
+  .productDesc {
+    font-style: 24px;
+    color: gray;
+  }
+  
+  .colors,
+  .sizes {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .color {
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    background-color: black;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .color:last-child {
+    background-color: darkblue;
+  }
+  
+  .size {
+    padding: 5px 20px;
+    border: 1px solid black;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .productButton {
+    float: right;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .productButton:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .gallery {
+    padding: 50px;
+    display: flex;
+  }
+  
+  .galleryItem {
+    flex: 1;
+    padding: 50px;
+  }
+  
+  .galleryImg {
+    width: 100%;
+  }
+  
+  /* Buynow card */
+
+  /* Payment Form Styles */
+.paymentForm {
+    width: 500px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.formContainer input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+}
+
+.formContainer button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.formContainer button:hover {
+    background-color: #45a049;
+}
+
+.paymentForm button:last-child {
+    background-color: #f44336;
+}
+
+.paymentForm button:last-child:hover {
+    background-color: #d32f2f;
 }

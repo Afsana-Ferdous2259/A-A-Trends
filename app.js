@@ -6,13 +6,13 @@ let aboutPage = document.querySelector(".about");
 let contactus = document.querySelector(".contact");
 
 
-let quantity = 1;  
-let cartCount = 0;
+// let quantity = 1;  
+// let cartCount = 0;
 
-function increaseQuantity() {
-    quantity++;
-    document.getElementById("quantity").innerText = quantity;
-}
+// function increaseQuantity() {
+//     quantity++;
+//     document.getElementById("quantity").innerText = quantity;
+// }
 
 function decreaseQuantity() {
     if (quantity > 1) {
@@ -177,16 +177,42 @@ function addItem(){
 
    document.getElementById("cardbaby").style.display = "none";
    document.getElementById("cardsaree").style.display = "none";
-
-
-
- 
-
-
-
 }
- 
-function addToCart(){
-   alert("Added To Cart");
-   location.reload();
+
+
+let cartCount = 0;
+
+function addToCart() {
+    cartCount++; // কার্ট কাউন্ট ১ বাড়াবে
+    document.getElementById("cartCount").innerText = cartCount; // সংখ্যা আপডেট করবে
 }
+
+
+function clearCart() {
+  cartCount = 0;
+  document.getElementById("cartCount").innerText = cartCount;
+}
+
+// Buy now card//
+
+function showPaymentForm() {
+  // Hide image after clicking 'Buy Now'
+  document.querySelector('.cartImg').style.display = 'none'; // Hide the image
+  document.querySelector('.cartText').style.display = 'none'; // Hide cart text
+  document.querySelector('.paymentForm').style.display = 'block'; // Show payment form
+}
+
+function closePaymentForm() {
+  document.querySelector('.cartImg').style.display = 'block'; // Show image again
+  document.querySelector('.cartText').style.display = 'block'; // Show cart text again
+  document.querySelector('.paymentForm').style.display = 'none'; // Hide payment form
+}
+
+function checkout() {
+  // Process payment details
+  alert('Checkout completed!');
+}
+
+
+
+
