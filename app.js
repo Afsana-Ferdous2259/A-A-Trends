@@ -6,6 +6,28 @@ let aboutPage = document.querySelector(".about");
 let contactus = document.querySelector(".contact");
 
 
+let quantity = 1;  
+let cartCount = 0;
+
+function increaseQuantity() {
+    quantity++;
+    document.getElementById("quantity").innerText = quantity;
+}
+
+function decreaseQuantity() {
+    if (quantity > 1) {
+        quantity--;
+        document.getElementById("quantity").innerText = quantity;
+    }
+}
+
+function addToCart() {
+    cartCount += quantity;
+    document.getElementById("cartCount").innerText = cartCount;
+    alert(quantity + " item(s) added to cart!");
+    quantity = 1;  // Reset quantity after adding to cart
+    document.getElementById("quantity").innerText = quantity;
+}
 
 
 function home() {
@@ -14,6 +36,10 @@ function home() {
    cardgirl.style.display = "block";
    blogContent.style.display = "block"
    contactus.style.display="none"
+
+   
+   document.getElementById("cardbaby").style.display = "block";
+   document.getElementById("cardsaree").style.display = "block";
    
    document.getElementById("blog").style.color = "black";
    document.getElementById("shop").style.color = "black";
@@ -31,6 +57,9 @@ function home() {
 function shop() {
    cardMen.style.display = "block";
    cardgirl.style.display = "block";
+   
+   document.getElementById("cardbaby").style.display = "block";
+   document.getElementById("cardsaree").style.display = "block";
    mainPage.style.display = "none"
    blogContent.style.display = "none";
    aboutPage.style.display = "none";
@@ -48,12 +77,19 @@ function shop() {
 
 function blog() {
 
+  
+   
+   
    cardMen.style.display = "none";
    cardgirl.style.display = "none";
    mainPage.style.display = "none";
-   blogContent.style.display = "block"
+   blogContent.style.display = "block";
    aboutPage.style.display = "none";
-   contactus.style.display="none"
+   contactus.style.display="none";
+
+   document.getElementById("cardbaby").style.display = "none";
+   document.getElementById("cardsaree").style.display = "none";
+
 
    document.getElementById("blog").style.color = "rgb(1, 190, 190)";
    document.getElementById("home").style.color = "black"
@@ -93,6 +129,12 @@ function contact() {
    cardgirl.style.display = "none";
    mainPage.style.display = "none";
    blogContent.style.display = "none"
+
+
+   document.getElementById("cardbaby").style.display = "none";
+   document.getElementById("cardsaree").style.display = "none";
+
+
    document.getElementById("blog").style.color = "black";
    document.getElementById("home").style.color = "black";
    document.getElementById("shop").style.color = "black";
@@ -113,6 +155,11 @@ function showCard(img){
    mainPage.style.display = "none";
    blogContent.style.display = "none"
 
+   document.getElementById("cardbaby").style.display = "none";
+   document.getElementById("cardsaree").style.display = "none";
+
+
+
 
 
 }
@@ -127,6 +174,11 @@ function addItem(){
    cardgirl.style.display = "none";
    mainPage.style.display = "none";
    blogContent.style.display = "none"
+
+   document.getElementById("cardbaby").style.display = "none";
+   document.getElementById("cardsaree").style.display = "none";
+
+
 
  
 
