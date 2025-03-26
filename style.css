@@ -218,25 +218,53 @@ nav ul{
     color: white;
 }
 .letter .inp input{
-    width: 270px;
-    height: 29px;
+    width:400px;
+    height: 30px;
     padding: 5px;
     font-size: 18px;
     border: none;
     outline: none;
-    
 }
-.inp{
+
+.inp {
+    text-align: center;
+    margin-top: 20px;
     display: flex;
 }
-.inp button{
-    width: 100px;
-    height: 39px;
+
+.inp input {
+    padding: 8px;
+    width: 250px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.inp button {
+    padding: 8px 15px;
+    margin: 0 5px; /* বাটনের মাঝে স্পেস রাখার জন্য */
     border: none;
-    background-color: rgb(3, 134, 134);
-    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    height: 40px;
+}
+
+#signUpBtn {
+    background-color: rgb(48, 117, 21);
     color: white;
 }
+
+#signOutBtn {
+    background-color: orange;
+    color: white;
+}
+#message {
+    text-align: center;
+    font-weight: bold;
+    display: none; /* প্রথমে মেসেজ হাইড থাকবে */
+}
+
 
 .footer{
     display: flex;
@@ -324,14 +352,16 @@ nav ul{
     margin-top: 73px;
 }
 .form button{
-    width: 340px;
+    width: 100px;
     height: 40px;
     border: none;
     background-color: rgb(1, 87, 87);
     color: white;
     font-size: 22px;
     margin-top: 22px;
-}
+    border-radius: 5px;
+    cursor: pointer;
+    }
 .form input{
     width: 320px;
     padding: 8px;
@@ -339,6 +369,28 @@ nav ul{
     margin: 3px;
     margin-top: 11px;
 }
+
+
+#submitbtn {
+    background-color: green;
+    color: white;
+}
+
+#resetbtn {
+    background-color: red !important; /* এই লাইন দিয়ে নিশ্চিত করা হয়েছে */
+    color: white;
+}
+
+#submitMessage{
+    display: none;
+    color: rgb(16, 18, 16);
+    font-weight: bold;
+    display: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+
 
 /* cart */
 
@@ -401,184 +453,7 @@ nav ul{
 
 }
 
-
-
-
-
-
-/* //// */
-
-.product {
-    height: 100vh;
-    background-color: whitesmoke;
-    position: relative;
-    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
-  }
-  
-  .payment {
-    width: 500px;
-    height: 500px;
-    background-color: white;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    padding: 10px 50px;
-    display: none;
-    flex-direction: column;
-    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
-  }
-  
-  .payTitle {
-    font-size: 20px;
-    color: lightgray;
-  }
-  
-  label {
-    font-size: 14px;
-    font-weight: 300;
-  }
-  
-  .payInput {
-    padding: 10px;
-    margin: 10px 0px;
-    border: none;
-    border-bottom: 1px solid gray;
-  }
-  
-  .payInput::placeholder {
-    color: rgb(163, 163, 163);
-  }
-  
-  .cardIcons {
-    display: flex;
-  }
-  
-  .cardIcon {
-    margin-right: 10px;
-  }
-  
-  .cardInfo {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .sm {
-    width: 30%;
-  }
-  
-  .payButton {
-    position: absolute;
-    height: 40px;
-    bottom: -40;
-    width: 100%;
-    left: 0;
-    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
-    background-color: #369e62;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .close {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    background-color: gray;
-    color: white;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    padding: 2px;
-  }
-  
-  .productImg {
-    width: 50%;
-  }
-  
-  .productDetails {
-    position: absolute;
-    top: 10%;
-    right: 0;
-    width: 40%;
-    padding: 50px;
-  }
-  
-  .productTitle {
-    font-size: 75px;
-    font-weight: 900;
-  }
-  
-  .productDesc {
-    font-style: 24px;
-    color: gray;
-  }
-  
-  .colors,
-  .sizes {
-    display: flex;
-    margin-bottom: 20px;
-  }
-  
-  .color {
-    width: 32px;
-    height: 32px;
-    border-radius: 5px;
-    background-color: black;
-    margin-right: 10px;
-    cursor: pointer;
-  }
-  
-  .color:last-child {
-    background-color: darkblue;
-  }
-  
-  .size {
-    padding: 5px 20px;
-    border: 1px solid black;
-    margin-right: 10px;
-    cursor: pointer;
-    font-size: 20px;
-  }
-  
-  .productButton {
-    float: right;
-    padding: 10px 20px;
-    background-color: black;
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-  }
-  
-  .productButton:hover {
-    background-color: white;
-    color: black;
-  }
-  
-  .gallery {
-    padding: 50px;
-    display: flex;
-  }
-  
-  .galleryItem {
-    flex: 1;
-    padding: 50px;
-  }
-  
-  .galleryImg {
-    width: 100%;
-  }
-  
-  /* Buynow card */
-
-  /* Payment Form Styles */
+/* Payment Form Styles */
 .paymentForm {
     width: 500px;
     margin: 50px auto;
@@ -615,3 +490,36 @@ nav ul{
 .paymentForm button:last-child:hover {
     background-color: #d32f2f;
 }
+
+
+/* serch box */
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.search-box input {
+    padding: 8px;
+    width: 400px;
+    border: 1px solid #c4c1c1;
+    border-radius: 7px;
+    height: 15px;
+    font-family: 50px;
+}
+
+.search-box button {
+    padding: 6px;
+    background-color: #0f0601;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 30px;
+    
+}
+
+/* submitted */
+

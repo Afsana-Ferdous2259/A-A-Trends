@@ -25,6 +25,10 @@
             <div class="logo">
                 <h1>Trends</h1>
             </div>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search Products...">
+                <button onclick="searchProduct()"><i class="fa-solid fa-search"></i></button>
+            </div>
             <ul>
                 <li>
                     <a id="home" onclick="home()">Home</a>
@@ -54,7 +58,7 @@
 
         <!-- Men Shirt -->
 
-        <div class="cardMen">
+        <div class="cardMen" id="cardMen">
             <div class="head">
                 <h1>Trends <span>Men's Wear</span></h1>
             </div>
@@ -108,7 +112,7 @@
 
     <!-- girl Tops -->
 
-    <div class="cardgirl">
+    <div class="cardgirl" id="cardgirl">
         <div class="head">
             <h1>Trends <span>Women's Wear</span></h1>
         </div>
@@ -250,7 +254,7 @@
                 </div>
             </div>
             <div class="crd"><br><br><br>
-                <img src="OIP (5).jpeg" alt="" onclick="showCard(this)">
+                <img src="OIP (1).jpeg" alt="" onclick="showCard(this)">
                 <div class="txt">
                     <h3>Baby CuddleWrap</h3>
                     <i class="fa-solid fa-star"></i>
@@ -381,12 +385,16 @@
 
         <div class="form">
             <h1>Connect with Us. Fill Form</h1>
-            <input type="text" placeholder="Enter Your FirstName"> <br>
-            <input type="text" placeholder="Enter Your LsstName"> <br>
-            <input type="text" placeholder="Enter Your Email"><br>
-            <input type="text" placeholder="Enter Your Number"><br>
-            <input type="text" placeholder="Enter Your Address"><br>
-            <button>Submit</button>
+            <input type="text" id="firstName" placeholder="Enter Your First Name"> <br>
+            <input type="text" id="lastName" placeholder="Enter Your Last Name"> <br>
+            <input type="text" id="email" placeholder="Enter Your Email"><br>
+            <input type="text" id="number" placeholder="Enter Your Number"><br>
+            <input type="text" id="address" placeholder="Enter Your Address"><br>
+            <button id="submitbtn" onclick="submitForm()">Submit</button>
+            <button id="resetbtn" onclick="resetForm()">Reset</button>
+             <p id="submitMessage">Submitted!</p>
+        </div>
+        
 
         </div>
     </div>
@@ -397,9 +405,13 @@
             <p>Lorem ipsum dolor sit, amet consectetur Special Offer</p>
         </div>
         <div class="inp">
-            <input type="text" placeholder="Enter Email Address">
-            <button>Sign Up</button>
+            <input type="text" id="emailInput" placeholder="Enter Email Address">
+            <button id="signUpBtn" onclick="signUp()">Sign Up</button>
+            <button id="signOutBtn" onclick="signOut()">Sign Out</button>
         </div>
+        
+        <p id="message" style="text-align: center; font-weight: bold;"></p>
+        
     </div>
 
     <!-- Footer -->

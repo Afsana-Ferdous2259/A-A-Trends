@@ -216,3 +216,76 @@ function checkout() {
 
 
 
+// search box ////
+
+function searchProduct() {
+   let query = document.getElementById("searchInput").value.toLowerCase().trim();
+   let sections = [
+       { keywords: ["men", "men's wear", "trends men's wear"], id: "cardMen" },
+       { keywords: ["girl", "girl tops", "trends women's wear"], id: "cardgirl" },
+       { keywords: ["saree", "saree collection", "trends saree collection"], id: "cardsaree" },
+       { keywords: ["baby", "baby cuddlewrap", "trends baby's wear"], id: "cardbaby" }
+   ];
+
+   let found = false;
+   sections.forEach(section => {
+       if (section.keywords.some(keyword => query.includes(keyword))) {
+           document.getElementById(section.id).scrollIntoView({ behavior: "smooth" });
+           found = true;
+       }
+   });
+
+   if (!found) {
+       alert("Product not found! Try searching 'Men's Wear', 'Girl Tops', etc.");
+   }
+}
+
+// submitted
+function submitForm() {
+   document.getElementById("submitMessage").style.display = "block";
+}
+
+function resetForm() {
+   document.getElementById("submitMessage").style.display = "none";
+   document.getElementById("firstName").value = "";
+   document.getElementById("lastName").value = "";
+   document.getElementById("email").value = "";
+   document.getElementById("number").value = "";
+   document.getElementById("address").value = "";
+}
+
+
+// signup
+function signUp() {
+   let email = document.getElementById("emailInput").value;
+   let message = document.getElementById("message");
+
+   if (email.trim() === "") {
+       message.innerText = "Please enter an email!";
+       message.style.color = "red";
+       message.style.display = "block"; // মেসেজ দেখাও
+   } else {
+       if (message.innerText === "Signed Up Successfully!") {
+           message.innerText = ""; // মেসেজ হাইড করো
+       } else {
+           message.innerText = "Signed Up Successfully!";
+           message.style.color = "green";
+           message.style.display = "block";
+       }
+   }
+}
+
+function signOut() {
+   let message = document.getElementById("message");
+   let emailInput = document.getElementById("emailInput");
+
+   if (message.innerText === "Signed Out!") {
+       message.innerText = ""; // মেসেজ হাইড করো
+       emailInput.value = ""; // ইনপুট ফিল্ড খালি করো
+   } else {
+       emailInput.value = ""; // ইনপুট ফিল্ড খালি করো
+       message.innerText = "Signed Out!";
+       message.style.color = "blue";
+       message.style.display = "block";
+   }
+}
